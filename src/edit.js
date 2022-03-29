@@ -31,6 +31,8 @@ import './editor.scss';
  */
 export default function Edit({attributes, setAttributes}) {
 
+	const { message } = attributes;
+
 	function updateMessage(e) {
 		setAttributes( { message: e.target.value } )
 	}
@@ -41,7 +43,7 @@ export default function Edit({attributes, setAttributes}) {
 				key='editable'
 				tagName='p'
 				placeholder={__('Enter a message...', 'message-block')}
-				value={ attributes.message }
+				value={ message }
 				onChange={ updateMessage }
 			>
 			</RichText>
