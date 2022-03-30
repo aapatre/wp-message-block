@@ -12,6 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { Button } from '@wordpress/components';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -24,11 +25,10 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  */
 export default function save({attributes}) {
 	const {message} = attributes;
-	console.log("Debugging");
-	console.log(attributes);
-	console.log(message);
+
 	return (
 		<div { ...useBlockProps.save() }>
+			
 			<RichText.Content
 				tagName='p'
 				value={ message }
