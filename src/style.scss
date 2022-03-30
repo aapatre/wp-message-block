@@ -6,7 +6,17 @@
  */
 
 .wp-block-message-block-message-block {
-	background-color: #21759b;
-	color: #fff;
+	background-color: yellow;
+	color: red;
 	padding: 2px;
+
+	button.components-button.button-close {
+		background-color: red;
+		color: yellow;
+		font-weight: 700;
+
+		&:hover {
+			background-color: orange;
+		}
+	}
 }
