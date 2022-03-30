@@ -33,18 +33,19 @@ export default function Edit({attributes, setAttributes}) {
 
 	const { message } = attributes;
 
-	function updateMessage(e) {
-		setAttributes( { message: e.target.value } )
-	}
-
 	return (
 		<div className='message-block-wrapper' { ...useBlockProps() }>
+
 			<RichText
 				key='editable'
 				tagName='p'
 				placeholder={__('Enter a message...', 'message-block')}
 				value={ message }
-				onChange={ updateMessage }
+				onChange={ (newMessage) => {
+					console.log("Typed message is: " + newMessage); 
+					setAttributes( { message: newMessage } );
+					console.log("Saved message is: " + message); 
+				}}
 			>
 			</RichText>
 		</div>
