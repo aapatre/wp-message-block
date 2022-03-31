@@ -12,7 +12,6 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { Button } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -36,10 +35,7 @@ export default function Edit({attributes, setAttributes}) {
 
 	return (
 		<div className='message-block-wrapper' { ...useBlockProps() }>
-			<Button
-				type='primary'
-				className='button-close'
-			>X</Button>
+			<button className='button-close'>X</button>
 			<RichText
 				key='editable'
 				tagName='p'

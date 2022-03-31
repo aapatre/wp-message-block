@@ -12,7 +12,6 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { Button } from '@wordpress/components';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -24,11 +23,20 @@ import { Button } from '@wordpress/components';
  * @return {WPElement} Element to render.
  */
 export default function save({attributes}) {
-	const {message} = attributes;
+	
+	const { message } = attributes;
+
+	function destroyParent(e) {
+		e.target.parentElement.remove();
+	}
 
 	return (
-		<div { ...useBlockProps.save() }>
-			
+		<div className='message-block-wrapper' { ...useBlockProps.save() }>
+			<button
+				className='button-close'
+				onClick={destroyParent}
+			>
+			X</button>
 			<RichText.Content
 				tagName='p'
 				value={ message }

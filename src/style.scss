@@ -5,15 +5,18 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-message-block-message-block {
+.wp-block-message-block-message-block, .message-block-wrapper {
 	background-color: yellow;
 	color: red;
-	padding: 2px;
+	padding: 10px;
 
-	button.components-button.button-close {
+	button.button-close {
 		background-color: red;
 		color: yellow;
 		font-weight: 700;
+		font-size: 18px;
+
+		padding: 5px;
 
 		&:hover {
 			background-color: orange;
