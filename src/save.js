@@ -23,12 +23,15 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 export default function save({attributes}) {
-	const {message} = attributes;
-	console.log("Debugging");
-	console.log(attributes);
-	console.log(message);
+	
+	const { message } = attributes;
+
 	return (
-		<div { ...useBlockProps.save() }>
+		<div className='message-block-wrapper' { ...useBlockProps.save() }>
+			<button
+				className='button-close'
+			>
+			X</button>
 			<RichText.Content
 				tagName='p'
 				value={ message }

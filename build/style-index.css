@@ -1,1 +1,26 @@
-.wp-block-message-block-message-block{background-color:#21759b;color:#fff;padding:2px}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-message-block-message-block, .message-block-wrapper {
+  background-color: yellow;
+  color: red;
+  padding: 10px;
+}
+.wp-block-message-block-message-block button.button-close, .message-block-wrapper button.button-close {
+  background-color: red;
+  color: yellow;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px;
+}
+.wp-block-message-block-message-block button.button-close:hover, .message-block-wrapper button.button-close:hover {
+  background-color: orange;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

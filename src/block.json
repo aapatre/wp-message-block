@@ -16,9 +16,7 @@
 	"style": "file:./style-index.css",
 	"attributes": {
 		"message": {
-			"type": "string",
-			"source": "html",
-			"selector": "p"
+			"type": "string"
 		}
 	}
 }

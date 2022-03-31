@@ -35,17 +35,13 @@ export default function Edit({attributes, setAttributes}) {
 
 	return (
 		<div className='message-block-wrapper' { ...useBlockProps() }>
-
+			<button className='button-close'>X</button>
 			<RichText
 				key='editable'
 				tagName='p'
 				placeholder={__('Enter a message...', 'message-block')}
 				value={ message }
-				onChange={ (newMessage) => {
-					console.log("Typed message is: " + newMessage); 
-					setAttributes( { message: newMessage } );
-					console.log("Saved message is: " + message); 
-				}}
+				onChange={ (newMessage) => { setAttributes( {message: newMessage} ) } }
 			>
 			</RichText>
 		</div>
