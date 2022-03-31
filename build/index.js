@@ -185,16 +185,10 @@ function save(_ref) {
   const {
     message
   } = attributes;
-
-  function destroyParent(e) {
-    e.target.parentElement.remove();
-  }
-
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     className: "message-block-wrapper"
   }, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save()), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("button", {
-    className: "button-close",
-    onClick: destroyParent
+    className: "button-close"
   }, "X"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText.Content, {
     tagName: "p",
     value: message
