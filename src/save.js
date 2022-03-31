@@ -26,15 +26,10 @@ export default function save({attributes}) {
 	
 	const { message } = attributes;
 
-	function destroyParent(e) {
-		e.target.parentElement.remove();
-	}
-
 	return (
 		<div className='message-block-wrapper' { ...useBlockProps.save() }>
 			<button
 				className='button-close'
-				onClick={destroyParent}
 			>
 			X</button>
 			<RichText.Content
